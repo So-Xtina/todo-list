@@ -16,6 +16,11 @@ class AddItem extends Component {
 		console.log("item", this.state);
 
 		this.props.add(this.state);
+
+		this.setState({
+			title: "",
+			details: ""
+		});
 	}
 
 	render() {
