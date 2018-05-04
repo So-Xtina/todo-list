@@ -7,8 +7,18 @@ export default props => {
 
 	const listElements = props.data.map((item, index) => {
 		return (
-			<li key={index} className="collection-item">
-				{item.title}
+			<li key={index} className="collection-item row">
+				<div className="col s10">{item.title}</div>
+				<div className="col s2 right-align">
+					<button
+						onClick={() => {
+							props.delete(index);
+						}}
+						className="btn red darken-2"
+					>
+						Delete
+					</button>
+				</div>
 			</li>
 		);
 	});
