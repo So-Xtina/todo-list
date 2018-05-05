@@ -12,7 +12,7 @@ export default props => {
 				<div className="col s2 right-align">
 					<button
 						onClick={() => {
-							props.delete(index);
+							props.delete(item._id);
 						}}
 						className="btn red darken-2"
 					>
